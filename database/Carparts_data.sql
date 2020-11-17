@@ -71,7 +71,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `manufactor` WRITE;
 /*!40000 ALTER TABLE `manufactor` DISABLE KEYS */;
-INSERT INTO `manufactor` VALUES (1,'Vehicle Sweden','Saabvägen 5, 461 38 Trollhättan',722654789,2);
+INSERT INTO `manufactor` VALUES (1,'Vehicle Sweden','Saabvägen 5, 461 38 Trollhättan','722654789',2);
 /*!40000 ALTER TABLE `manufactor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -153,4 +153,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-12 16:18:38
+-- Dump completed on 2020-11-17 19:43:47

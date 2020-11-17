@@ -11,8 +11,9 @@ class Car(Base):
     CarsManufactor = sa.Column(sa.String(100), nullable=False)
     CarsModel = sa.Column(sa.String(100), nullable=False)
     CarsColor = sa.Column(sa.String(100), nullable=False)
-    CustomerId = relationship("Customer", back_populates="cars")
+    CustomerId = sa.Column(sa.Integer, sa.ForeignKey('customer.CustomerId'))
+    Customer = relationship("Customer", back_populates="Cars")
 
 
     def __repr__(self):
-        return f'{self.CarsModel}\nCustomer:\n\t{"".join(Customer.CustomerName + ", " for Customer in self.CustomerId)}'
+        return f'{self.CarsModel}\nCustomer:\n\t{self.Customer}'
