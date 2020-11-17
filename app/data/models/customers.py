@@ -12,9 +12,9 @@ class Customer(Base):
     CustomerAddress = sa.Column(sa.String(100), nullable=False)
     CustomerPhone = sa.Column(sa.String(100), nullable=False)
     CustomerEmail = sa.Column(sa.String(100), nullable=False)
-    CustomerTypeId = relationship("CustomerType", back_populates="customers")
+    CustmerTypeId = relationship("CustmerType", back_populates="customers")
 
 
     def __repr__(self):
-        return f'{self.CustomerName}\nCustomerType:\n\t{"".join(CustomerType + ", " for CustomerType in self.CustomerTypeId)}'
+        return f'{self.CustomerName}\nCustmerType:\n\t{"".join(CustmerType + ", " for CustmerType in self.CustmerTypeId)}'
 

@@ -10,4 +10,4 @@ class CustomerType(Base):
     CustomerType = sa.Column(sa.String(100), nullable=False)
 
     def __repr__(self):
-        return f'CustomerTypes(CustomerTypeId={self.CustomerTypeId}, CustomerType={self.CustomerType})'
+        return f'customertypes(CustomerTypeId={self.CustomerTypeId}, CustomerType={self.CustomerType})'
