@@ -15,4 +15,4 @@ class Car(Base):
 
 
     def __repr__(self):
-        return f'{self.CarsModel}\nCustomer:\n\t{"".join(customer.name + ", " for customer in self.CustomerId)}'
+        return f'{self.CarsModel}\nCustomer:\n\t{"".join(Customer.CustomerName + ", " for Customer in self.CustomerId)}'
