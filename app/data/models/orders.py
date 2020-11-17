@@ -14,4 +14,4 @@ class Order(Base):
 
 
     def __repr__(self):
-        return f'{self.OrderDate}\nStore:\n\t{"".join(Store + ", " for Store in self.StoreId)}\nCustomer:\n\t{"".join(customer.name + ", " for customer in self.CustomerId)}'
+        return f'{self.OrderDate}\nStore:\n\t{"".join(Store + ", " for Store in self.StoreId)}\nCustomer:\n\t{"".join(Customer.CustomerName + ", " for Customer in self.CustomerId)}'
