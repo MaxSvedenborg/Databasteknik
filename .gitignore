@@ -1,4 +1,6 @@
-python/venv/
+venv/
 .idea/
 *.bak
 *.pyc
+App/DB/alembic.ini
+App/DB/db_settings/
