@@ -1,4 +1,4 @@
-python/venv/
+Python/venv/
 .idea/
 *.bak
 *.pyc

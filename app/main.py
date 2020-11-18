@@ -1,9 +1,9 @@
-from db import Base, engine, session
-from data.models.cars import Car
-from data.models.customers import Customer
-from data.models.customer_type import CustomerType
+from DB import Base, engine, session
+from Data.Models.cars import Car
+from Data.Models.customers import Customer
+from Data.Models.customer_type import CustomerType
 
-#add to repository later
+#add to Repository later
 def main():
     customer_types = session.query(CustomerType).all()
     for customer_type in customer_types:

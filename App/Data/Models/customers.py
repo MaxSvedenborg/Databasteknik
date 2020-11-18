@@ -1,4 +1,4 @@
-from db import Base
+from DB import Base
 import sqlalchemy as sa
 from sqlalchemy.orm import relationship
 

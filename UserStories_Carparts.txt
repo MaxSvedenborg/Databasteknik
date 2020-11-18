@@ -1,0 +1,26 @@
+Customer Type: 
+
+	As a user, I want be able to edit or add customers type, if there are any changes from the business in the future. 
+	As a user, I want to be able to seach and see the number of customers for each customers type. 
+
+Customers:
+
+	As a user, I want to be able to add customers list into the system. 
+	As a user, I want to be able to see all customers in the system. 
+	As a user, I want to be able to choose which customers type it is when adding into the system. 
+	As a user, as I am done with adding customers into the system, I want to be able to choose whether to exit the program or to make an order for this particular customer. 
+	As a user, I want to be able to see how many cars did this particular customer own, by searching for name or ID. 
+	As a user, I want to be able to see how many orders history of this customers. 
+
+Cars:
+
+	As a user, I want to see how many cars in the database. 
+	As a user, I want to be able to add new cars into the database system. 
+        As a user, I want to be able to see which customers own this car. 
+	As a user, I want to be able to search for CarsID and see the details. 
+
+Orders:
+
+	As a user, I want to be able to add the order into the system. 
+	As a user, I want to be able to search for orders id to see the details, and follow up for customers in the future if needed. 
+	 
