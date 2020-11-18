@@ -1,12 +1,12 @@
 def get_all_cars():
     #return all cars
-    #As a user, I want to see how many cars in the database.
+    #As a user, I want to see how many cars in the Database.
     pass
 
 
 def create_new_cars():
-    #add new cars into the database system
-    #As a user, I want to be able to add new cars into the database system.
+    #add new cars into the Database system
+    #As a user, I want to be able to add new cars into the Database system.
     pass
 
 
