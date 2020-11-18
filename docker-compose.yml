@@ -9,5 +9,5 @@ services:
     cap_add:
       - SYS_NICE
     environment:
-      MYSQL_ROOT_PASSWORD: mysql
+      #MYSQL_ROOT_PASSWORD: override locally
       MYSQL_DATABASE: database2
