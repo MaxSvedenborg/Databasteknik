@@ -2,3 +2,7 @@ Python/venv/
 .idea/
 *.bak
 *.pyc
+App/Data/DB/da_settings/
+Databaseteknik/docker-compose/
+
+
