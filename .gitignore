@@ -4,9 +4,3 @@ venv/
 *.pyc
 App/DB/alembic.ini
 App/DB/db_settings/
-Python/venv/
-.idea/
-*.bak
-*.pyc
-App/Data/DB/da_settings/
-Databaseteknik/docker-compose/
