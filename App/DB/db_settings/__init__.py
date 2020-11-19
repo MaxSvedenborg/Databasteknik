@@ -1,5 +1,5 @@
 DB_USER = "root"
-DB_PASSWORD = "mysql"
+DB_PASSWORD = "18PhilipR"
 DB_HOST = "localhost"
 DB_PORT = "33007"
-DB_DATABASE = "database2"
+DB_DATABASE = "databasv2"

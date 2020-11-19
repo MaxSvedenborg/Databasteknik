@@ -1,0 +1,10 @@
+1. Klona repo från GitHub
+2. Öppna ett konsollfönster i projektets huvudmapp
+3. Skriv: python -m venv venv
+4. Öppna det nedladdade projektet i PyCharm
+5. Gå in i menyn File och Settings6. Välj Project Projektnamn
+6. Välj Project Interpreter
+7. Tryck på det lilla kugghjulet bredvid sökvägen till Interpreter välj Add
+8. Kryssa i Existing Virtual Environment
+9. Tryck på knappen ... och navigera in i mappen venv/Scripts och hitta python.exe
+Klar

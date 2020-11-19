@@ -17,8 +17,12 @@ depends_on = None
 
 
 def upgrade():
-    pass
-
+    op create_table(
+        'orderspareparts',
+        sa.Column('OrderId', sa.Integer, primary_key=True, auto_increment=True),
+        sa.Column('SparepartId', sa.Integer, primary_key=True, auto_increment=True),
+        sa.Column('OrdersAmount', sa.Integer, nullable=False)
+    )
 
 def downgrade():
-    pass
+    op.drop_table('orderspareparts')

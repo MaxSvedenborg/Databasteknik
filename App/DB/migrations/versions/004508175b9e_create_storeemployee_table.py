@@ -17,8 +17,12 @@ depends_on = None
 
 
 def upgrade():
-    pass
-
+    op create_table(
+        'storeemployees',
+        sa.Column('StoreEmployeeId', sa.Integer, primary_key=True, auto_increment=True),
+        sa.Column('StoreId', sa.Integer, sa.ForeignKey('stores.StoreId')),
+        sa.Column('PersonalDataId', sa.Integer, sa.ForeignKey('personaldata.PersonalDataId'))
+    )
 
 def downgrade():
-    pass
+    op.drop_table('storeemployees')

@@ -17,8 +17,15 @@ depends_on = None
 
 
 def upgrade():
-    pass
-
+    op create_table(
+        'suppliers',
+        sa.Column('SupplierId', sa.Integer, primary_key=True, auto_increment=True),
+        sa.Column('SupplierName', sa.String(100), nullable=False),
+        sa.Column('SupplierAddress', sa.String(100), nullable=False),
+        sa.Column('SupplierPhone', sa.String(100), nullable=False),
+        sa.Column('SupplierEmail', sa.String(100), nullable=False),
+        sa.Column('PersonalDataId', sa.Integer, sa.ForeignKey('personaldata.PersonalDataId')),
+    )
 
 def downgrade():
-    pass
+    op.drop_table('suppliers')

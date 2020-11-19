@@ -2,5 +2,7 @@ venv/
 .idea/
 *.bak
 *.pyc
+App/Data/DB/db_settings/
+Databasteknik/docker-compose.yml/
 App/DB/alembic.ini
 App/DB/db_settings/
