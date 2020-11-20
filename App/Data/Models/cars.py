@@ -11,8 +11,8 @@ class Car(Base):
     CarsManufactor = sa.Column(sa.String(100), nullable=False)
     CarsModel = sa.Column(sa.String(100), nullable=False)
     CarsColor = sa.Column(sa.String(100), nullable=False)
-    CustomerId = sa.Column(sa.Integer, sa.ForeignKey('customer.CustomerId'))
-    Customer = relationship("Customer", back_populates="Cars")
+    CustomerId = sa.Column(sa.Integer, sa.ForeignKey('customers.CustomerId'))
+    Customer = relationship("Customer", back_populates="cars")
 
 
     def __repr__(self):

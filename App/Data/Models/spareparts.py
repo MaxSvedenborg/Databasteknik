@@ -3,7 +3,7 @@ import sqlalchemy as sa
 from sqlalchemy.orm import relationship
 
 class Sparepart(Base):
-    tablename = 'spareparts'
+    __tablename__ = 'spareparts'
 
     SparepartId = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
     SparepartName = sa.Column(sa.String(100), nullable=False)

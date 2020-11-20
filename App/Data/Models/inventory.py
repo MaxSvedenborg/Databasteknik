@@ -4,16 +4,16 @@ from sqlalchemy.orm import relationship
 
 
 class Inventory(Base):
-    __tablename__ = 'inventory'
+    __tablename__ = 'inventories'
 
     InventoryId = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
-    StoreId = relationship("Store", back_populates="inventory")
+    StoreId = relationship("Store", back_populates="inventories")
     InventoryLocation = sa.Column(sa.String(100), nullable=False)
     InventoryQTY = sa.Column(sa.Integer, nullable=False)
     InventoryCriticalLevel = sa.Column(sa.Integer, nullable=False)
     InventoryQTYAutomaticOrder = sa.Column(sa.Integer, nullable=False)
     InventoryETA = sa.Column(sa.String(100, nullable=False)
-    SparepartId = relationship("Sparepart", back_populates="inventory")
+    SparepartId = relationship("Sparepart", back_populates="inventories")
 
 
     def __repr__(self):
