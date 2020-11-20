@@ -16,9 +16,18 @@ branch_labels = None
 depends_on = None
 
 
+
 def upgrade():
-    pass
+    op.create_table(
+        'customers',
+        sa.Column('CustomerId', sa.Integer, primary_key=True, autoincrement=True),
+        sa.Column('CustomerName', sa.String(100), nullable=False),
+        sa.Column('CustomerAddress', sa.String(100), nullable=False),
+        sa.Column('CustomerPhone', sa.String(100), nullable=False),
+        sa.Column('CustomerEmail', sa.String(100), nullable=False),
+        sa.Column('CustomerTypeId', sa.Integer, sa.ForeignKey('customertypes.CustomerTypeId')),
+    )
 
 
 def downgrade():
-    pass
+    op.drop_table('customers')

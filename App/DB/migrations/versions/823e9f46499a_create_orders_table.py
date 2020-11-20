@@ -17,8 +17,15 @@ depends_on = None
 
 
 def upgrade():
-    pass
+    op.create_table(
+        'orders',
+        sa.Column('OrderId', sa.Integer, primary_key=True, autoincrement=True),
+        sa.Column('OrderDate', sa.Date, nullable=False),
+        sa.Column('OrderTime', sa.Time, nullable=False),
+        sa.Column('StoreId', sa.Integer, sa.ForeignKey('stores.StoreId')),
+        sa.Column('CustomerId', sa.Integer, sa.ForeignKey('customers.CustomerId')),
+    )
 
 
 def downgrade():
-    pass
+    op.drop_table('orders')

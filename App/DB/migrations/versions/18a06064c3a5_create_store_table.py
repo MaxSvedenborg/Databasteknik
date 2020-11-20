@@ -17,8 +17,15 @@ depends_on = None
 
 
 def upgrade():
-    pass
+    op.create_table(
+        'stores',
+        sa.Column('StoreId', sa.Integer, primary_key=True, autoincrement=True),
+        sa.Column('StoreName', sa.String(100), nullable=False),
+        sa.Column('StoreAddress', sa.String(100), nullable=False),
+        sa.Column('StorePhone', sa.String(100), nullable=False),
+        sa.Column('StoreEmail', sa.String(100), nullable=False),
+    )
 
 
 def downgrade():
-    pass
+    op.drop_table('stores')

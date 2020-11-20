@@ -1,7 +1,7 @@
 from DB import Base, engine, session
 from Data.Models.cars import Car
 from Data.Models.customers import Customer
-from Data.Models.customer_type import CustomerType
+from Data.Models.customertype import CustomerType
 
 #add to Repository later
 def main():

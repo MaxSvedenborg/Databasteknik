@@ -17,8 +17,12 @@ depends_on = None
 
 
 def upgrade():
-    pass
+    op.create_table(
+        'carspareparts',
+        sa.Column('CarsId', sa.Integer, primary_key=True, autoincrement=True),
+        sa.Column('SparepartId', sa.Integer, primary_key=True, autoincrement=True),
+    )
 
 
 def downgrade():
-    pass
+    op.drop_table('carspareparts')
