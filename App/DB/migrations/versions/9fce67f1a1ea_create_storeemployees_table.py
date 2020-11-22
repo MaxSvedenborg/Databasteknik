@@ -20,8 +20,8 @@ def upgrade():
     op.create_table(
         'storeemployees',
         sa.Column('StoreEmployeeId', sa.Integer, primary_key=True, autoincrement=True),
-        sa.Column('StoreId', sa.Integer, sa.ForeignKey('stores.StoreId')),
-        sa.Column('PersonalDataId', sa.Integer, sa.ForeignKey('personaldata.PersonalDataId')),
+        sa.Column('StoreId', sa.Integer, sa.ForeignKey('stores.StoreId'), nullable=False),
+        sa.Column('PersonalDataId', sa.Integer, sa.ForeignKey('personaldata.PersonalDataId'), nullable=False),
     )
 
 

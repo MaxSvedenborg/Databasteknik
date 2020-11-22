@@ -10,10 +10,11 @@ def create_new_cars():
     pass
 
 
-def get_all_cars_by_customers_id():
+def get_all_cars_by_customerId():
     #As a user, I want to be able to see which customers own this car.
     pass
 
-def search_carsID
-    #As a user, I want to be able to search for CarsID and see the details.
 
+def search_carsId():
+    #As a user, I want to be able to search for CarsID and see the details.
+    pass

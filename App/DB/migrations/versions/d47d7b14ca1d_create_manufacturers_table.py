@@ -23,7 +23,7 @@ def upgrade():
         sa.Column('ManufacturerName', sa.String(100), nullable=False),
         sa.Column('ManufacturerAddressHQ', sa.String(100), nullable=False),
         sa.Column('ManufacturerPhoneHQ', sa.String(100), nullable=False),
-        sa.Column('PersonalDataId', sa.Integer, sa.ForeignKey('personaldata.PersonalDataId')),
+        sa.Column('PersonalDataId', sa.Integer, sa.ForeignKey('personaldata.PersonalDataId'), nullable=False),
     )
 
 

@@ -20,9 +20,9 @@ def upgrade():
     op.create_table(
         'spareparts',
         sa.Column('SparepartId', sa.Integer, primary_key=True, autoincrement=True),
-        sa.Column('SparepartName', sa.String(45), nullable=False),
-        sa.Column('ManufacturerId', sa.Integer, sa.ForeignKey('manufacturers.manufacturerId')),
-        sa.Column('SupplierId', sa.Integer, sa.ForeignKey('suppliers.supplierId')),
+        sa.Column('SparepartName', sa.String(100), nullable=False),
+        sa.Column('ManufacturerId', sa.Integer, sa.ForeignKey('manufacturers.ManufacturerId'), nullable=False),
+        sa.Column('SupplierId', sa.Integer, sa.ForeignKey('suppliers.SupplierId'), nullable=False),
         sa.Column('SparepartDescription', sa.String(10000), nullable=False),
     )
 

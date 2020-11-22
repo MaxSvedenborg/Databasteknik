@@ -24,7 +24,7 @@ def upgrade():
         sa.Column('CarsManufacturer', sa.String(100), nullable=False),
         sa.Column('CarsModel', sa.String(100), nullable=False),
         sa.Column('CarsColor', sa.String(100), nullable=False),
-        sa.Column('CustomerId', sa.Integer, sa.ForeignKey('customers.CustomerId')),
+        sa.Column('CustomerId', sa.Integer, sa.ForeignKey('customers.CustomerId'), nullable=False),
     )
 
 
