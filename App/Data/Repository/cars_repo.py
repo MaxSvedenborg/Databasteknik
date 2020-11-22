@@ -1,7 +1,8 @@
+from Data.Models.cars import Car
+from DB import session
+
 def get_all_cars():
-    #return all cars
-    #As a user, I want to see how many cars in the Database.
-    pass
+    return session.query(Car).all()
 
 
 def create_new_cars():

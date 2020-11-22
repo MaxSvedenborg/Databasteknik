@@ -1,4 +1,4 @@
-from db import Base
+from DB import Base
 import sqlalchemy as sa
 from sqlalchemy.orm import relationship
 
@@ -12,10 +12,9 @@ class Store(Base):
     StorePhone = sa.Column(sa.String(100), nullable=False)
     StoreEmail = sa.Column(sa.String(100), nullable=False)
 
-    Inventories = relationship("Inventory", back_populates="Stores")
-    Orders = relationship("Order", back_populates="Stores")
+    Inventories = relationship("Inventory", back_populates="Store")
+    Orders = relationship("Order", back_populates="Store")
     Storeemployees = relationship("StoreEmployee", back_populates="Stores")
 
     def repr(self):
-        return f'Store(StoreID={self.StoreId}, StoreName={self.StoreName}, StoreAddress={self.StoreAddress}' \
-               f'StorePhone={self.StorePhone}, StoreEmail{self.StoreEmail})'
+        return f'{self.StoreId}'

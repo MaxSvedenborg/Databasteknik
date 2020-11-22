@@ -1,17 +1,28 @@
-def get_all_customers():
-    #return all customers
-    #As a user, I want to be able to see all customers in the system.
-    pass
+from Data.Models.customers import Customer
+from DB import session
 
-def create_new_orders():
-    #add new customers into the system
-    #As a user, I want to be able to add customers list into the system.
-    pass
 
 def get_all_customers():
-    #return all customers
-    pass
+    return session.query(Customer).all()
 
-def create_new_orders():
-    #add new customers into the system
-    pass
+
+def get_customer_by_id(id):
+    return session.query(Customer).filter(Customer.customerNumber == id).first()
+
+
+def get_customer_by_name(pattern):
+    # Post.query.filter(Post.tags.like(search)).all()
+    return session.query(Customer).filter(Customer.customerName.like(f'%{pattern}%')).all()
+
+
+def store_changes():
+   session.commit()
+
+
+def store_new_first_name(customer, new_value):
+    try:
+        customer.contactFirstName = new_value
+        # ....
+        session.commit()
+    except:
+        session.rollback()

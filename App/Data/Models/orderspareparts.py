@@ -1,4 +1,4 @@
-from db import Base
+from DB import Base
 import sqlalchemy as sa
 from sqlalchemy.orm import relationship
 
@@ -14,4 +14,4 @@ class OrderSparepart(Base):
     Spareparts = relationship("Sparepart", back_populates="Orderspareparts")
 
     def repr(self):
-        return f'OrderSparepart(OrderId={self.OrderId}, SparepartId={self.SparepartId}, OrderAmount={self.OrderAmount})'
+        return f'{self.OrderId},{self.SparepartId}'

@@ -13,9 +13,9 @@ class Supplier(Base):
     SupplierEmail = sa.Column(sa.String(100), nullable=False)
     PersonalDataId = sa.Column(sa.Integer, sa.ForeignKey('personaldata.PersonalDataId'), nullable=False)
 
-    PersonalData = relationship("PersonalData", back_populates="suppliers")
-    Spareparts = relationship("Sparepart", back_populates="Suppliers")
+    PersonalData = relationship("Personaldata")
+    Spareparts = relationship("Sparepart", back_populates="Supplier")
 
 
     def __repr__(self):
-        return f'{self.SupplierName}\nPersonaldata:\n\t{"".join(Personaldata.PersonalDataName + ", " for Personaldata in self.PersonalDataId)}'
+        return f'{self.SupplierId}'

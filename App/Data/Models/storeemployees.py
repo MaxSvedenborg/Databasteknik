@@ -11,8 +11,8 @@ class StoreEmployee(Base):
     PersonalDataId = sa.Column(sa.Integer, sa.ForeignKey('personaldata.PersonalDataId'), nullable=False)
 
     Stores = relationship("Store", back_populates="Storeemployees")
-    PersonalData = relationship("PersonalData", back_populates="Storeemployees")
+    Personalata = relationship("Personaldata")
 
 
     def __repr__(self):
-        return f'{self.StoreEmployeeId}\nStore:\n\t{"".join(Store + ", " for Store in self.StoreId)}\nPersonalData:\n\t{"".join(PersonalData.PersonalDataName + ", " for PersonalData in self.PersonalDataId)}'
+        return f'{self.StoreEmployeeId}'
