@@ -2,4 +2,3 @@ venv/
 .idea/
 *.bak
 *.pyc
-App/DB/db_settings/
