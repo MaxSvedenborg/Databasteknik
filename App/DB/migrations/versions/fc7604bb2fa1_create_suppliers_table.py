@@ -24,7 +24,7 @@ def upgrade():
         sa.Column('SupplierAddress', sa.String(100), nullable=False),
         sa.Column('SupplierPhone', sa.String(100), nullable=False),
         sa.Column('SupplierEmail', sa.String(100), nullable=False),
-        sa.Column('PersonalDataId', sa.Integer, sa.ForeignKey('personaldata.PersonalDataId')),
+        sa.Column('PersonalDataId', sa.Integer, sa.ForeignKey('personaldata.PersonalDataId'), nullable=False),
     )
 
 

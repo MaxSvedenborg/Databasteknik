@@ -20,13 +20,13 @@ def upgrade():
     op.create_table(
         'inventories',
         sa.Column('InventoryId', sa.Integer, primary_key=True, autoincrement=True),
-        sa.Column('StoreId', sa.Integer, sa.ForeignKey('stores.StoreId')),
+        sa.Column('StoreId', sa.Integer, sa.ForeignKey('stores.StoreId'), nullable=False),
         sa.Column('InventoryLocation', sa.String(100), nullable=False),
         sa.Column('InventoryQTY', sa.Integer, nullable=False),
         sa.Column('InventoryCriticalLevel', sa.Integer, nullable=False),
         sa.Column('InventoryQTYAutomaticOrder', sa.Integer, nullable=False),
         sa.Column('InventoryETA', sa.String(100), nullable=False),
-        sa.Column('SparepartId', sa.Integer, sa.ForeignKey('spareparts.SparepartId')),
+        sa.Column('SparepartId', sa.Integer, sa.ForeignKey('spareparts.SparepartId'), nullable=False),
     )
 
 

@@ -1,6 +1,7 @@
-from db import Base
+from DB import Base
 import sqlalchemy as sa
 from sqlalchemy.orm import relationship
+
 
 class Personaldata(Base):
     __tablename__ = 'personaldata'
@@ -12,5 +13,4 @@ class Personaldata(Base):
 
 
     def repr(self):
-        return f'Personaldata(PersonalDataID={self.PersonalDataId}, PersonalDataName={self.PersonalDataName}, ' \
-               f'PersonalDataPhone={self.PersonalDataPhone}, PersonalDataEmail{self.PersonalDataEmail})'
+        return f'{self.PersonalDataId}'

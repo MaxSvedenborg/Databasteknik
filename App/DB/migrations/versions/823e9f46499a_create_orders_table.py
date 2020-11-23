@@ -22,8 +22,8 @@ def upgrade():
         sa.Column('OrderId', sa.Integer, primary_key=True, autoincrement=True),
         sa.Column('OrderDate', sa.Date, nullable=False),
         sa.Column('OrderTime', sa.Time, nullable=False),
-        sa.Column('StoreId', sa.Integer, sa.ForeignKey('stores.StoreId')),
-        sa.Column('CustomerId', sa.Integer, sa.ForeignKey('customers.CustomerId')),
+        sa.Column('StoreId', sa.Integer, sa.ForeignKey('stores.StoreId'), nullable=False),
+        sa.Column('CustomerId', sa.Integer, sa.ForeignKey('customers.CustomerId'), nullable=False),
     )
 
 

@@ -19,7 +19,7 @@ depends_on = None
 def upgrade():
     op.create_table(
         'customertypes',
-        sa.Column('CustomerTypeId', sa.Integer, Primary_key=True, autoincrement=True),
+        sa.Column('CustomerTypeId', sa.Integer, primary_key=True, autoincrement=True),
         sa.Column('CustomerType', sa.String(100), nullable=False),
     )
 

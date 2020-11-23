@@ -19,8 +19,8 @@ depends_on = None
 def upgrade():
     op.create_table(
         'carspareparts',
-        sa.Column('CarsId', sa.Integer, primary_key=True, autoincrement=True),
-        sa.Column('SparepartId', sa.Integer, primary_key=True, autoincrement=True),
+        sa.Column('CarsId', sa.Integer, sa.ForeignKey('cars.CarsId'), primary_key=True),
+        sa.Column('SparepartId', sa.Integer, sa.ForeignKey('spareparts.SparepartId'), primary_key=True),
     )
 
 

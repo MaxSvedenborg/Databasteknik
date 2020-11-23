@@ -11,12 +11,12 @@ class Customer(Base):
     CustomerAddress = sa.Column(sa.String(100), nullable=False)
     CustomerPhone = sa.Column(sa.String(100), nullable=False)
     CustomerEmail = sa.Column(sa.String(100), nullable=False)
-    CustomerTypeId = sa.Column(sa.Integer, sa.ForeignKey('customertype.CustomerTypeId'))
-    CustomerType = relationship("CustomerType", back_populates="customers")
-    Cars = relationship("Car", back_populates="customers")
+    CustomerTypeId = sa.Column(sa.Integer, sa.ForeignKey('customertypes.CustomerTypeId'), nullable=False)
 
+    CustomerType = relationship("CustomerType")
+    Cars = relationship("Car")
+    Orders = relationship("Order", back_populates="Customer")
 
     def __repr__(self):
-        #return f'{self.CustomerName}\nCustomerType:\n\t{"".join(CustomerType + ", " for CustomerType in self.CustomerTypeId)}'
-        return f'{self.CustomerName}\nCustomerType:\n\t{self.CustomerType}'
+        return f'{self.CustomerId}'
 

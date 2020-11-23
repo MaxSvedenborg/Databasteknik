@@ -25,7 +25,7 @@ def upgrade():
         sa.Column('CustomerAddress', sa.String(100), nullable=False),
         sa.Column('CustomerPhone', sa.String(100), nullable=False),
         sa.Column('CustomerEmail', sa.String(100), nullable=False),
-        sa.Column('CustomerTypeId', sa.Integer, sa.ForeignKey('customertypes.CustomerTypeId')),
+        sa.Column('CustomerTypeId', sa.Integer, sa.ForeignKey('customertypes.CustomerTypeId'), nullable=False),
     )
 
 
