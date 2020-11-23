@@ -1,2 +1,2 @@
-def view_all_orders(customerstypeId):
+def view_all_orders(customerstypeId): #todo
     pass
