@@ -53,14 +53,26 @@ def store_new_email(customer, new_value):
         session.rollback()
 
 
-def store_new_customertyp(customer, new_value):
+def store_new_customertype(customer, new_value):
     try:
-        customer.CustomerType = new_value
+        customer.CustomerTypeId = new_value
         # ....
         session.commit()
     except:
         session.rollback()
 
+def store_new_customer(customer):
+    try:
+        session.add(customer)
+        session.commit()
+    except:
+        session.rollback()
 
-def store_new_customertype(customer, new_value):
-    return None
+def delete_customer(customer):
+    try:
+        session.delete(customer)
+        session.commit()
+    except Exception as e:
+        print(e)
+        session.rollback()
+

@@ -29,10 +29,17 @@ def store_new_address(customer, new_value):
 def store_new_phone(customer, new_value):
     cr.store_new_phone(customer, new_value)
 
+
 def store_new_email(customer, new_value):
     cr.store_new_email(customer, new_value)
+
 
 def store_new_customertype(customer, new_value):
     cr.store_new_customertype(customer, new_value)
 
+def store_new_customer(customer):
+    cr.store_new_customer(customer)
+
+def delete_customer(customer):
+    cr.delete_customer(customer)
 #todo modify customer type
