@@ -6,7 +6,7 @@ from sqlalchemy.orm import relationship
 class Order(Base):
     __tablename__ = 'orders'
 
-    OrdersId = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
+    OrderId = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
     OrderDate = sa.Column(sa.Date, nullable=False)
     OrderTime = sa.Column(sa.Time, nullable=False)
     StoreId = sa.Column(sa.Integer, sa.ForeignKey('stores.StoreId'), nullable=False)
