@@ -1,10 +1,13 @@
+from UI.cars_menu import cars_menu
 from UI.customers_menu import customers_menu
+from UI.customers_type_menu import customers_type_menu
+from UI.orders_menu import orders_menu
 
 
 def main_menu():
     while True:
         print("Main Menu")
-        print("=========")
+        print("=====================")
         print("1. Customers")
         print("2. Customer Types")
         print("3. Cars")
@@ -18,7 +21,7 @@ def main_menu():
         print("11. Manufacturer")
         print("12. Spareparts")
         print("13. Inventories")
-        print("14. Quit")
+        print("14. Exit")
 
         selection = input("> ")
         if selection == "1":

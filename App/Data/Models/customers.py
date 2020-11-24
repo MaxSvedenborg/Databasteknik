@@ -18,5 +18,5 @@ class Customer(Base):
     Orders = relationship("Order", back_populates="Customer")
 
     def __repr__(self):
-        return f'{self.CustomerId}'
+        return f'{self.CustomerName}'
 
