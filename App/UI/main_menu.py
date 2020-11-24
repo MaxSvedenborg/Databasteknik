@@ -23,7 +23,8 @@ def main_menu():
         print("13. Inventories")
         print("14. Exit")
 
-        selection = input("> ")
+        print("=====================")
+        selection = input("Please enter option above >> ")
         if selection == "1":
             customers_menu()
         elif selection == "2":

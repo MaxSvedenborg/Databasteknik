@@ -46,7 +46,7 @@ def customers_menu():
                 for key, customer in customers.items():
                    print(f'{key}. {customer}')
 
-                edit_choice = input("Do you want to edit customer information [y/n]: ")
+                edit_choice = input("Would you like to edit customer information [y/n]: ")
                 if (edit_choice.lower() == "y"):
                     edit_selection = input("Enter number for customer to edit: ")
                     edit_selection = int(edit_selection)
@@ -76,6 +76,7 @@ def customers_menu():
                         store_new_email(customer, new_value)
                         print("Sucessfully updated customer email")
                     elif line == "5":
+
                         print('Please select the following customer type:')
                         print('1. Company')
                         print('2. Private')

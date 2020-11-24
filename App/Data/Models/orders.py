@@ -17,4 +17,4 @@ class Order(Base):
 
 
     def __repr__(self):
-        return f'{self.OrdersId}'
+        return f'{self.OrderDate} {self.OrderTime} ({self.Customer.CustomerName} / {self.Store.StoreName})'
