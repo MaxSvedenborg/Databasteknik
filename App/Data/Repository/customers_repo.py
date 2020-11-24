@@ -1,7 +1,6 @@
 from Data.Models.customers import Customer
 from DB import session
 
-#todo
 def get_all_customers():
     return session.query(Customer).all()
 
@@ -21,7 +20,6 @@ def store_changes():
 def store_new_name(customer, new_value):
     try:
         customer.CustomerName = new_value
-        # ....
         session.commit()
     except:
         session.rollback()
@@ -30,7 +28,6 @@ def store_new_name(customer, new_value):
 def store_new_address(customer, new_value):
     try:
         customer.CustomerAddress = new_value
-        # ....
         session.commit()
     except:
         session.rollback()
@@ -39,7 +36,6 @@ def store_new_address(customer, new_value):
 def store_new_phone(customer, new_value):
     try:
         customer.CustomerPhone = new_value
-        # ....
         session.commit()
     except:
         session.rollback()
@@ -47,7 +43,6 @@ def store_new_phone(customer, new_value):
 def store_new_email(customer, new_value):
     try:
         customer.CustomerEmail = new_value
-        # ....
         session.commit()
     except:
         session.rollback()
@@ -56,7 +51,6 @@ def store_new_email(customer, new_value):
 def store_new_customertype(customer, new_value):
     try:
         customer.CustomerTypeId = new_value
-        # ....
         session.commit()
     except:
         session.rollback()

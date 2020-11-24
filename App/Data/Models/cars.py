@@ -17,4 +17,4 @@ class Car(Base):
     CarSpareparts = relationship("CarSparepart")
 
     def __repr__(self):
-        return f'{self.CarsId}'
+        return f'{self.CarsManufacturer} ({self.CarsModel})'

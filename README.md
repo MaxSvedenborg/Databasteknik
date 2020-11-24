@@ -10,3 +10,9 @@
 1. Execute `Database/carparts_data.sql` to load test data into database
 1. Run `main.py`
 
+
+## Todo / Improvements
+
+1. Update & Delete cascade 
+1. Errors handling
+1. Edit view all fuction (table name), and make it nice presentation. 

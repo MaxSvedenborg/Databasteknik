@@ -1,21 +1,83 @@
 from Data.Models.cars import Car
 from DB import session
 
+#todo
 def get_all_cars():
     return session.query(Car).all()
 
 
-def create_new_cars():
-    #add new cars into the Database system
-    #As a user, I want to be able to add new cars into the Database system.
-    pass
+def get_car_by_id(id):
+    return session.query(Car).filter(Car.CarsId == id).first()
 
 
-def get_all_cars_by_customerId():
-    #As a user, I want to be able to see which customers own this car.
-    pass
+def get_car_by_manufacturer(pattern):
+    return session.query(Car).filter(Car.CarsManufacturer.like(f'%{pattern}%')).all()
 
 
-def search_carsId():
-    #As a user, I want to be able to search for CarsID and see the details.
-    pass
+def store_changes():
+   session.commit()
+
+
+def store_new_regno(car, new_value):
+    try:
+        car.CarsRegNo = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_manufacturer(car, new_value):
+    try:
+        car.CarsManufacturer = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_model(car, new_value):
+    try:
+        car.CarsModel = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_color(car, new_value):
+    try:
+        car.CarsColor = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_owner(car, new_value):
+    try:
+        car.CustomerId = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_owner(car, new_value):
+    try:
+        car.CustomerId = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_car(car):
+    try:
+        session.add(car)
+        session.commit()
+    except:
+        session.rollback()
+
+
+def delete_car(car):
+    try:
+        session.delete(car)
+        session.commit()
+    except Exception as e:
+        print(e)
+        session.rollback()
