@@ -15,14 +15,15 @@ from Data.Models.customers import Customer
 
 def customers_menu():
     while True:
+        print("===========================")
         print("Customers Menu")
         print("===========================")
         print("1. View All Customers")
         print("2. View Customer by Id")
         print("3. Find and Update Customers")
         print("4. Create new Customer into the system")
-        print("5. Delete customer from the system")
-        print("7. Exit Customers Menu")
+        print("5. Delete Customer from the system")
+        print("6. Exit Customers Menu")
 
         selection = input("Please select options:  ")
 
@@ -32,7 +33,7 @@ def customers_menu():
                 print(customer)
 
         elif selection == "2":
-            id = input("Enter Customer Id: ")
+            id = input("Enter customer Id: ")
             customer = get_customer_by_id(id)
             if customer:
                 print(customer)

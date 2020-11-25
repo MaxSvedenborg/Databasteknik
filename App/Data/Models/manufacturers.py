@@ -16,4 +16,4 @@ class Manufacturer(Base):
     Spareparts = relationship("Sparepart", back_populates="Manufacturer")
 
     def __repr__(self):
-        return f'{self.ManufacturerId}'
+        return f'{self.ManufacturerName}'

@@ -4,6 +4,7 @@ from Data.Repository.customertypes_repo import get_all_customer_types
 
 def customers_type_menu():
     while True:
+        print("===========================")
         print("Customers Types Menu")
         print("===========================")
         print("1. View All Customer Types")

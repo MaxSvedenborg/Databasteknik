@@ -6,6 +6,7 @@ from Data.Models.cars import Car
 
 def cars_menu():
     while True:
+        print("===========================")
         print("Cars Menu")
         print("===========================")
         print("1. View All Cars")
@@ -51,25 +52,25 @@ def cars_menu():
 
                     line = input("Enter number for what line to edit: ")
                     if line == "1":
-                        new_value = input("Enter new Car Registration Number: ")
+                        new_value = input("Enter new car Registration Number: ")
                         store_new_regno(car, new_value)
-                        print("Sucessfully updated new Car Registration Number")
+                        print("Sucessfully updated new car Registration Number")
                     elif line == "2":
                         new_value = input("Enter new Car Manufacturer: ")
                         store_new_manufacturer(car, new_value)
-                        print("Sucessfully updated new Car Manufacturer")
+                        print("Sucessfully updated new car manufacturer")
                     elif line == "3":
                         new_value = input("Enter new Car Model: ")
                         store_new_model(car, new_value)
-                        print("Sucessfully updated new Car Model")
+                        print("Sucessfully updated new car model")
                     elif line == "4":
                         new_value = input("Enter new Car Color: ")
                         store_new_color(car, new_value)
-                        print("Sucessfully updated new Car Color")
+                        print("Sucessfully updated new car color")
                     elif line == "5":
                         new_value = input("Enter new Owner: Customer Id: ")
                         store_new_owner(car, new_value)
-                        print("Sucessfully updated new Owner with Customer Id")
+                        print("Sucessfully updated new owner with customer Id")
             else:
                 print("No car found")
 
@@ -81,8 +82,8 @@ def cars_menu():
                 car.CarsRegNo = input("Enter Car Registration Number: ")
                 car.CarsManufacturer = input("Enter Car Manufacturer: ")
                 car.CarsModel = input("Enter Car Model: ")
-                Car.CarsColor= input("Enter Car Color: ")
-                Car.CustomerId = input("Enter Customer Id: ")
+                car.CarsColor = input("Enter Car Color: ")
+                car.CustomerId = input("Enter Customer Id: ")
                 store_new_car(car)
                 print("Sucessfully created new car")
 

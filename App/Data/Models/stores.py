@@ -16,5 +16,5 @@ class Store(Base):
     Orders = relationship("Order", back_populates="Store")
     Storeemployees = relationship("StoreEmployee", back_populates="Stores")
 
-    def repr(self):
-        return f'{self.StoreId}'
+    def __repr__(self):
+        return f'{self.StoreName}'

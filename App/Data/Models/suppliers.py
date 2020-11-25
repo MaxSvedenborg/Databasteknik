@@ -18,4 +18,4 @@ class Supplier(Base):
 
 
     def __repr__(self):
-        return f'{self.SupplierId}'
+        return f'{self.SupplierName}'

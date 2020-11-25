@@ -5,6 +5,7 @@ from Data.Models.orders import Order
 
 def orders_menu():
     while True:
+        print("===========================")
         print("Orders Menu")
         print("===========================")
         print("1. View All Orders")
