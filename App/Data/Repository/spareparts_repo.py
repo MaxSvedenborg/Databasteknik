@@ -1,21 +1,51 @@
 from Data.Models.spareparts import Sparepart
 from DB import session
 
+
 def get_all_spareparts():
     return session.query(Sparepart).all()
 
 
-def create_new_spareparts():
-    #add new cars into the Database system
-    #As a user, I want to be able to add new cars into the Database system.
-    pass
+def get_sparepart_by_id(id):
+    return session.query(Sparepart).filter(Sparepart.SparepartId == id).first()
 
 
-def get_all_cars_by_sparepartsId():
-    #As a user, I want to be able to see which customers own this car.
-    pass
+def get_sparepart_by_name(pattern):
+    return session.query(Sparepart).filter(Sparepart.spareparts.like(f'%{pattern}%')).all()
 
 
-def search_sparepartsId():
-    #As a user, I want to be able to search for CarsID and see the details.
-    pass
+def sparepart_changes():
+   session.commit()
+
+
+def store_new_sparepart_name(Sparepart, new_value):
+    try:
+        Sparepart.SparepartName = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_sparepart_description(Sparepart, new_value):
+    try:
+        Sparepart.SparepartDescription = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_sparepart(Sparepart):
+    try:
+        session.add(Sparepart)
+        session.commit()
+    except:
+        session.rollback()
+
+
+def delete_sparepart(Sparepart):
+    try:
+        session.delete(Sparepart)
+        session.commit()
+    except Exception as e:
+        print(e)
+        session.rollback()

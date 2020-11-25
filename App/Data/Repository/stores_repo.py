@@ -1,21 +1,67 @@
 from Data.Models.stores import Store
 from DB import session
 
+
 def get_all_stores():
     return session.query(Store).all()
 
 
-def create_new_stores():
-    #add new stores into the Database system
-    #As a user, I want to be able to add stores into the Database system.
-    pass
+def get_store_by_id(id):
+    return session.query(Store).filter(Store.StoreId == id).first()
 
 
-def get_all_stores_by_customerId():
-    #As a user, I want to be able to see which customers own this store.
-    pass
+def get_store_by_name(pattern):
+    return session.query(Store).filter(Store.stores.like(f'%{pattern}%')).all()
 
 
-def search_storesId():
-    #As a user, I want to be able to search for storesID and see the details.
-    pass
+def store_changes():
+   session.commit()
+
+
+def store_new_store_name(store, new_value):
+    try:
+        store.StoreName = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_store_address(store, new_value):
+    try:
+        store.StoreAddress = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_store_phone(store, new_value):
+    try:
+        store.StorePhone = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_store_email(store, new_value):
+    try:
+        store.StoreEmail = new_value
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_store(store):
+    try:
+        session.add(store)
+        session.commit()
+    except:
+        session.rollback()
+
+
+def delete_store(store):
+    try:
+        session.delete(store)
+        session.commit()
+    except Exception as e:
+        print(e)
+        session.rollback()
