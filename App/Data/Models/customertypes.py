@@ -11,4 +11,4 @@ class CustomerType(Base):
 
 
     def __repr__(self):
-        return f'{self.CustomerTypeId}'
+        return f'{self.CustomerType}'
