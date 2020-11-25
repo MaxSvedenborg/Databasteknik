@@ -1,7 +1,7 @@
 from Data.Models.cars import Car
 from DB import session
 
-#todo
+
 def get_all_cars():
     return session.query(Car).all()
 
@@ -58,19 +58,12 @@ def store_new_owner(car, new_value):
         session.rollback()
 
 
-def store_new_owner(car, new_value):
-    try:
-        car.CustomerId = new_value
-        session.commit()
-    except:
-        session.rollback()
-
-
 def store_new_car(car):
     try:
         session.add(car)
         session.commit()
-    except:
+    except Exception as e:
+        print(e)
         session.rollback()
 
 

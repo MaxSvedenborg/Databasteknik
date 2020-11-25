@@ -9,6 +9,7 @@ def get_all_personaldata():
 def get_personaldata_by_id(id):
     return session.query(Personaldata).filter(Personaldata.PersonalDataId == id).first()
 
+
 def get_personaldata_by_name(pattern):
     return session.query(Personaldata).filter(Personaldata.PersonalDataName.like(f'%{pattern}%')).all()
 
@@ -20,16 +21,6 @@ def store_changes():
 def store_new_name(personaldata, new_value):
     try:
         personaldata.PersonalDataName = new_value
-        # ....
-        session.commit()
-    except:
-        session.rollback()
-
-
-def store_new_address(personaldata, new_value):
-    try:
-        personaldata.PersonalDataAddress = new_value
-        # ....
         session.commit()
     except:
         session.rollback()
@@ -38,7 +29,14 @@ def store_new_address(personaldata, new_value):
 def store_new_phone(personaldata, new_value):
     try:
         personaldata.PersonalDataPhone = new_value
-        # ....
+        session.commit()
+    except:
+        session.rollback()
+
+
+def store_new_email(personaldata, new_value):
+    try:
+        personaldata.PersonalDataEmail= new_value
         session.commit()
     except:
         session.rollback()
@@ -48,7 +46,8 @@ def store_new_personaldata(personaldata):
     try:
         session.add(personaldata)
         session.commit()
-    except:
+    except Exception as e:
+        print(e)
         session.rollback()
 
 

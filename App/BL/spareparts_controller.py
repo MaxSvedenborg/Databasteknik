@@ -15,7 +15,7 @@ def get_sparepart_by_name(pattern):
 
 
 def sparepart_changes():
-    spr.Sparepart_changes()
+    spr.sparepart_changes()
 
 
 def store_new_sparepart_name(Sparepart, new_value):

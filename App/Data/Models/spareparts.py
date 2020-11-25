@@ -17,6 +17,7 @@ class Sparepart(Base):
 
     Carspareparts = relationship("CarSparepart", back_populates="Sparepart")
     Inventories = relationship("Inventory", back_populates="Sparepart")
+    Orderspareparts = relationship("OrderSparepart")
 
     def __repr__(self):
-        return f'{self.SparepartId}'
+        return f'{self.SparepartName}'

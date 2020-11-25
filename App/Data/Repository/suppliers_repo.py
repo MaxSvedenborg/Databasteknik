@@ -21,7 +21,6 @@ def store_changes():
 def store_new_name(supplier, new_value):
     try:
         supplier.SupplierName = new_value
-        # ....
         session.commit()
     except:
         session.rollback()
@@ -30,7 +29,6 @@ def store_new_name(supplier, new_value):
 def store_new_address(supplier, new_value):
     try:
         supplier.SupplierAddress = new_value
-        # ....
         session.commit()
     except:
         session.rollback()
@@ -39,7 +37,6 @@ def store_new_address(supplier, new_value):
 def store_new_phone(supplier, new_value):
     try:
         supplier.SupplierPhone = new_value
-        # ....
         session.commit()
     except:
         session.rollback()
@@ -48,7 +45,6 @@ def store_new_phone(supplier, new_value):
 def store_new_email(supplier, new_value):
     try:
         supplier.SupplierEmail = new_value
-        # ....
         session.commit()
     except:
         session.rollback()
@@ -58,7 +54,8 @@ def store_new_supplier(supplier):
     try:
         session.add(supplier)
         session.commit()
-    except:
+    except Exception as e:
+        print(e)
         session.rollback()
 
 

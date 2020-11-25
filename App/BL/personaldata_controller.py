@@ -22,12 +22,12 @@ def store_new_name(personaldata, new_value):
     pr.store_new_name(personaldata, new_value)
 
 
-def store_new_address(personaldata, new_value):
-    pr.store_new_address(personaldata, new_value)
-
-
 def store_new_phone(personaldata, new_value):
     pr.store_new_phone(personaldata, new_value)
+
+
+def store_new_email(personaldata, new_value):
+    pr.store_new_email(personaldata, new_value)
 
 
 def store_new_personaldata(personaldata):

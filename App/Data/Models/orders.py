@@ -14,6 +14,7 @@ class Order(Base):
 
     Store = relationship("Store", back_populates="Orders")
     Customer = relationship("Customer", back_populates="Orders")
+    Orderspareparts = relationship("OrderSparepart")
 
 
     def __repr__(self):

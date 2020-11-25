@@ -1,10 +1,13 @@
+from BL.personaldata_controller import store_new_personaldata
 from BL.suppliers_controller import get_all_suppliers, get_supplier_by_id, get_supplier_by_name, store_new_name, \
     store_new_phone, store_new_address, store_new_email, store_new_supplier, delete_supplier
+from Data.Models.personaldata import Personaldata
 from Data.Models.suppliers import Supplier
 
 
 def suppliers_menu():
     while True:
+        print("===========================")
         print("Suppliers Menu")
         print("===========================")
         print("1. View All Suppliers")
@@ -70,14 +73,20 @@ def suppliers_menu():
         elif selection == "4":
 
             supplier = Supplier()
-            supplier.PersonalDataId = supplier
-            supplier.SupplierName = input("Enter Customer Name: ")
-            supplier.SupplierAddress = input("Enter Customer Address: ")
-            supplier.SupplierPhone = input("Enter Customer Phone: ")
-            supplier.SupplierEmail = input("Enter new Email: ")
+            supplier.SupplierName = input("Enter Supplier Name: ")
+            supplier.SupplierAddress = input("Enter Supplier Address: ")
+            supplier.SupplierPhone = input("Enter Supplier Phone: ")
+            supplier.SupplierEmail = input("Enter Supplier Email: ")
 
+            contact_person = Personaldata()
+            contact_person.PersonalDataName = input("Supplier contact person name: ")
+            contact_person.PersonalDataPhone = input("Supplier contact person phone: ")
+            contact_person.PersonalDataEmail = input("Supplier contact person email: ")
+
+            store_new_personaldata(contact_person)
+            supplier.PersonalData = contact_person
             store_new_supplier(supplier)
-            print("Sucessfully created new Supplier")
+            print("Sucessfully created new supplier")
 
         elif selection == "5":
             pattern = input("Enter full or partial Supplier name: ")
@@ -86,11 +95,11 @@ def suppliers_menu():
                 for key, supplier in suppliers.items():
                     print(f'{key}. {supplier}')
 
-                delete_selection = input("Enter number for Supplier to delete: ")
+                delete_selection = input("Enter number for supplier to delete: ")
                 delete_selection = int(delete_selection)
 
                 supplier = suppliers[delete_selection]
                 delete_supplier(supplier)
-                print("Sucessfully deleted Supplier")
+                print("Sucessfully deleted supplier")
         else:
             break

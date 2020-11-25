@@ -21,8 +21,8 @@ def upgrade():
         'personaldata',
         sa.Column('PersonalDataId', sa.Integer, primary_key=True, autoincrement=True),
         sa.Column('PersonalDataName', sa.String(100), nullable=False),
-        sa.Column('PersonalDataAddress', sa.String(100), nullable=False),
         sa.Column('PersonalDataPhone', sa.String(100), nullable=False),
+        sa.Column('PersonalDataEmail', sa.String(100), nullable=False),
     )
 
 

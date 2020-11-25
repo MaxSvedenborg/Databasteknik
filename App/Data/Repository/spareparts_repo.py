@@ -11,7 +11,7 @@ def get_sparepart_by_id(id):
 
 
 def get_sparepart_by_name(pattern):
-    return session.query(Sparepart).filter(Sparepart.spareparts.like(f'%{pattern}%')).all()
+    return session.query(Sparepart).filter(Sparepart.SparepartName.like(f'%{pattern}%')).all()
 
 
 def sparepart_changes():
@@ -38,7 +38,8 @@ def store_new_sparepart(Sparepart):
     try:
         session.add(Sparepart)
         session.commit()
-    except:
+    except Exception as e:
+        print(e)
         session.rollback()
 
 

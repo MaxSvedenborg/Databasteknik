@@ -5,20 +5,20 @@ from Data.Models.stores import Store
 
 def stores_menu():
     while True:
+        print("===========================")
         print("Stores Menu")
         print("===========================")
         print("1. View All Stores")
         print("2. View Stores by Id")
-        print("3. View Stores by Name")
-        print("4. Find and Update Stores")
-        print("5. Create new Store into the system")
-        print("6. Delete Store from the system")
-        print("7. Exit Store Menu")
+        print("3. Find and Update Stores")
+        print("4. Create new Store into the system")
+        print("5. Delete Store from the system")
+        print("6. Exit Store Menu")
 
         selection = input("Please select options:  ")
 
         if selection == "1":
-            cars = get_all_stores()
+            stores = get_all_stores()
             for store in stores:
                 print(store)
 
@@ -31,11 +31,7 @@ def stores_menu():
                 print("Could not find store with id ", id)
 
         elif selection == "3":
-            pattern = input("Enter full or partial name of the store: ")
-            stores = get_store_by_name(pattern)
-
-        elif selection == "4":
-            pattern = input("Enter full or partial name of the store: ")
+            pattern = input("Enter full or partial store name: ")
             stores = get_store_by_name(pattern)
             if len(stores) > 0:
                 for key, store in stores.items():
@@ -73,8 +69,7 @@ def stores_menu():
             else:
                 print("No store found")
 
-
-        elif selection == "5":
+        elif selection == "4":
             store = Store()
             store.StoreName = input("Enter Store Name: ")
             store.StoreAddress = input("Enter Store Address: ")
@@ -83,7 +78,7 @@ def stores_menu():
             store_new_store(store)
             print("Sucessfully created new store")
 
-        elif selection == "6":
+        elif selection == "5":
             pattern = input("Enter full or partial store name: ")
             stores = get_store_by_name(pattern)
             if len(stores) > 0:

@@ -19,4 +19,4 @@ class Inventory(Base):
     Store = relationship("Store", back_populates="Inventories")
 
     def __repr__(self):
-        return f'{self.InventoryId}'
+        return f'{self.InventoryLocation}'

@@ -11,7 +11,7 @@ def get_store_by_id(id):
 
 
 def get_store_by_name(pattern):
-    return session.query(Store).filter(Store.stores.like(f'%{pattern}%')).all()
+    return session.query(Store).filter(Store.StoreName.like(f'%{pattern}%')).all()
 
 
 def store_changes():

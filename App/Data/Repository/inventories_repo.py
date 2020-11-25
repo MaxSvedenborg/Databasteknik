@@ -11,7 +11,7 @@ def get_inventory_by_id(id):
 
 
 def get_inventory_by_location(pattern):
-    return session.query(Inventory).filter(Inventory.InventoryLocation.Like(f'%{pattern}%')).all()
+    return session.query(Inventory).filter(Inventory.InventoryLocation.like(f'%{pattern}%')).all()
 
 
 def inventory_changes():
@@ -46,7 +46,8 @@ def store_new_inventory(Inventory):
     try:
         session.add(Inventory)
         session.commit()
-    except:
+    except Exception as e:
+        print(e)
         session.rollback()
 
 

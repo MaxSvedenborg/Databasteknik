@@ -12,5 +12,5 @@ class Personaldata(Base):
     PersonalDataEmail = sa.Column(sa.String(100), nullable=False)
 
 
-    def repr(self):
-        return f'{self.PersonalDataId}'
+    def __repr__(self):
+        return f'{self.PersonalDataName}'

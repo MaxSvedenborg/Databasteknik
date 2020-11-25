@@ -23,7 +23,7 @@ def store_new_store_name(store, new_value):
 
 
 def store_new_store_address(store, new_value):
-    sr.store_new_store_adress(store, new_value)
+    sr.store_new_store_address(store, new_value)
 
 
 def store_new_store_phone(store, new_value):
