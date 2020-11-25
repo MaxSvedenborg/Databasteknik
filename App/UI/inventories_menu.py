@@ -1,11 +1,13 @@
-from BL.stores_controller import get_all_inventories, get_inventory_by_id, store_new_inventory_location, \
+from BL.inventories_controller import get_all_inventories, get_inventory_by_id, store_new_inventory_location, \
     store_new_inventory_QTY, store_new_inventory_automatic_order, store_new_inventory, delete_inventory, \
-    get_inventory_by_location, get_inventory_by_name
+    get_inventory_by_location
 from Data.Models.inventories import Inventory
 
 
 def inventories_menu():
+    global Inventory
     while True:
+        print("===========================")
         print("Inventory Menu")
         print("===========================")
         print("1. View All Inventories")
@@ -37,7 +39,7 @@ def inventories_menu():
 
         elif selection == "4":
             pattern = input("Enter full or partial name of the inventory: ")
-            inventories = get_inventory_by_name(pattern)
+            inventories = get_inventory_by_location(pattern)
             if len(inventories) > 0:
                 for key, Inventory in inventories.items():
                     print(f'{key}. {Inventory}')
@@ -80,8 +82,8 @@ def inventories_menu():
             print("Sucessfully created new inventory")
 
         elif selection == "6":
-            pattern = input("Enter full or partial inventory name: ")
-            stores = get_inventory_by_name(pattern)
+            pattern = input("Enter full or partial inventory location: ")
+            inventories = get_inventory_by_location(pattern)
             if len(inventories) > 0:
                 for key, inventory in inventories.items():
                     print(f'{key}. {inventory}')

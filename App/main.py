@@ -11,6 +11,7 @@ from Data.Models.inventories import Inventory
 from Data.Models.orders import Order
 from Data.Models.storeemployees import StoreEmployee
 from Data.Models.stores import Store
+from Data.Repository.personaldata_repo import get_all_personaldata
 from App.UI.main_menu import main_menu
 
 

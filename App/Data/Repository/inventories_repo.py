@@ -10,14 +10,12 @@ def get_inventory_by_id(id):
     return session.query(Inventory).filter(Inventory.InventoryId == id).first()
 
 
-def get_inventory_by_name(pattern):
-    return session.query(Inventory).filter(Inventory.inventories.like(f'%{pattern}%')).all()
-
 def get_inventory_by_location(pattern):
     return session.query(Inventory).filter(Inventory.InventoryLocation.Like(f'%{pattern}%')).all()
 
+
 def inventory_changes():
-   session.commit()
+    session.commit()
 
 
 def store_new_inventory_location(Inventory, new_value):
@@ -59,3 +57,4 @@ def delete_inventory(Inventory):
     except Exception as e:
         print(e)
         session.rollback()
+

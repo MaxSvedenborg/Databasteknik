@@ -9,20 +9,17 @@ def get_inventory_by_id(id):
     return ir.get_inventory_by_id(id)
 
 
-def get_inventory_by_name(pattern):
-    inventories = ir.get_inventory_by_name(pattern)
-    return {i+1: inventory for i, inventory in enumerate(inventories)}
-
 def get_inventory_by_location(pattern):
     inventories = ir.get_inventory_by_location(pattern)
     return {i+1: inventory for i, inventory in enumerate(inventories)}
+
 
 def inventory_changes():
     ir.inventory_changes()
 
 
 def store_new_inventory_location(inventory, new_value):
-    ir.store_new_store_name(inventory, new_value)
+    ir.store_new_inventory_location(inventory, new_value)
 
 
 def store_new_inventory_QTY(inventory, new_value):
@@ -30,7 +27,7 @@ def store_new_inventory_QTY(inventory, new_value):
 
 
 def store_new_inventory_automatic_order(inventory, new_value):
-    ir.store_new_store_phone(inventory, new_value)
+    ir.store_new_inventory_automatic_order(inventory, new_value)
 
 
 def store_new_inventory(Inventory):

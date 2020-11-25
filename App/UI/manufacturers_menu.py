@@ -3,7 +3,7 @@ from BL.manufacturers_controller import get_all_manufacturers, get_manufacturer_
 from Data.Models.manufacturers import Manufacturer
 
 
-def stores_menu():
+def manufacturers_menu():
     while True:
         print("Manufacturer Menu")
         print("===========================")

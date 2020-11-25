@@ -3,7 +3,7 @@ from Data.Models.storeemployees import StoreEmployee
 from Data.Repository.employees_repo import store_new_store
 
 
-def employee_menu():
+def employees_menu():
     while True:
         print("Employees Menu")
         print("===========================")

@@ -4,7 +4,7 @@ from BL.personaldata_controller import get_all_personaldata, get_personaldata_by
 from Data.Models.personaldata import Personaldata
 
 
-def personal_data_menu():
+def personaldata_menu():
     while True:
         print("Personaldata Menu")
         print("=================")

@@ -3,7 +3,7 @@ from BL.ordersparepart_controller import get_all_orderspareparts, get_orderspare
 
 from Data.Models.orderspareparts import OrderSparepart
 
-def customers_menu():
+def orderspareparts_menu():
     while True:
         print("Orderspareparts Menu")
         print("===========================")
