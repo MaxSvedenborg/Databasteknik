@@ -1,6 +1,7 @@
 from Data.Repository.customertypes_repo import get_all_customertypes
 from Data.Repository.customers_repo import get_all_customers
 from Data.Repository.cars_repo import get_all_cars
+from Data.Repository.personaldata_repo import get_all_personaldata
 from Data.Models.carspareparts import CarSparepart
 from Data.Models.spareparts import Sparepart
 from Data.Models.manufacturers import Manufacturer

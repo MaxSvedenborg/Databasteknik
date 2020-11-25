@@ -1,4 +1,4 @@
-from BL.customers_controller import get_all_customers, get_customer_by_id, get_customer_by_name
+from BL.customers_controller import get_all_customers, get_customer_by_id, get_customer_by_name, store_new_first_name
 
 
 def customers_menu():
