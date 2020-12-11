@@ -3,11 +3,11 @@ version: "3"
 services:
   db:
     image: mysql:latest
-    container_name: "Mysql_DB"
+    container_name: "Mysql_DB_Relational"
     ports:
       - "33007:3306"
     cap_add:
       - SYS_NICE
     environment:
-      MYSQL_ROOT_PASSWORD: 18PhilipR
+      MYSQL_ROOT_PASSWORD: mysql
       MYSQL_DATABASE: databasv2

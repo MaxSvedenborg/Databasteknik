@@ -48,15 +48,15 @@ def personaldata_menu():
                 line = input("Enter number for what line to edit: ")
                 if line == "1":
                     new_value = input("Enter new Personaldata Name: ")
-                    store_new_name(personaldata, new_value)
+                    store_new_name(pd, new_value)
                     print("Sucessfully updated personaldata name")
                 elif line == "2":
                     new_value = input("Enter new Phone: ")
-                    store_new_phone(personaldata, new_value)
+                    store_new_phone(pd, new_value)
                     print("Sucessfully updated personaldata Phone")
                 elif line == "3":
                     new_value = input("Enter new Email: ")
-                    store_new_email(personaldata, new_value)
+                    store_new_email(pd, new_value)
                     print("Sucessfully updated personaldata email")
             else:
                 print("No personaldata found")

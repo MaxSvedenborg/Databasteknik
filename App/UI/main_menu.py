@@ -17,11 +17,11 @@ def main_menu():
         print("=====================")
         print("1. Customers") #tested
         print("2. Customer Types") #tested
-        print("3. Cars") #tested
+        print("3. Cars")  #tested
         print("4. Orders") #tested
         print("5. Personal Data") #tested
         print("6. Suppliers") #tested
-        print("7. Stores") #tested
+        print("7. Stores")  #tested
         print("8. Manufacturers") #tested
         print("9. Spareparts") #tested
         print("10. Inventories") #tested

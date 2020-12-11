@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
--- Host: localhost    Database: databasv2
+-- Host: localhost    Scripts: databasv2
 -- ------------------------------------------------------
 -- Server version	8.0.22
 
@@ -19,6 +19,8 @@
 -- Dumping Data for table `cars`
 --
 
+use databasv2;
+
 LOCK TABLES `cars` WRITE;
 /*!40000 ALTER TABLE `cars` DISABLE KEYS */;
 INSERT INTO `cars` VALUES (1,'SEJ123','BMW','1 Series','Red',1),(2,'NOK456','AUDI','Q3','Yellow',2),(3,'DEK789','VOLKSWAGEN','Bora','Blue',3),(4,'FEN258','SAAB','9-3','White',4),(5,'DPG369','VOLVO','V60','Black',5);
@@ -26,7 +28,7 @@ INSERT INTO `cars` VALUES (1,'SEJ123','BMW','1 Series','Red',1),(2,'NOK456','AUD
 UNLOCK TABLES;
 
 --
--- Dumping Data for table `carspareparts`
+-- Dumping Data for table `carsparepart`
 --
 
 LOCK TABLES `carspareparts` WRITE;

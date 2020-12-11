@@ -13,7 +13,7 @@ def orders_menu():
         print("3. Find and Update Orders")
         print("4. Create new Order into the system")
         print("5. Delete Order from the system")
-        print("7. Exit Order Menu")
+        print("6. Exit Order Menu")
 
         selection = input("Please select options:  ")
 
